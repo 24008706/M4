@@ -11,18 +11,15 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 
 ## PROGRAM
 ```
-#include <stdio.h>
-int main() {
-int a = 44, b = 3;
-int result;
-result = a << b;
-printf("Result after left shifting 44 by 3 positions: %d\n", result);
-return 0;
-}
+ #include<stdio.h>
+ int main(){
+ int a=44;
+ a=a<<3;
+ printf("After Left Shift Operation value of a is:%d",a);
+ }
 ```
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/c36b98cd-37c6-4157-8dad-23670f8705d7)
-
+![image](https://github.com/user-attachments/assets/797e9315-a5d4-46a4-bd28-4eb2027c3682)
 
 
 
@@ -58,23 +55,25 @@ Write a C Program to check whether the two numbers are equal or not using simple
 
 ## PROGRAM
 ```
-#include <stdio.h>
-int main() {
-int num1, num2;
-printf("Enter two numbers: ");
-scanf("%d %d", &num1, &num2);
-if (num1 == num2) {
-printf("Both numbers are equal.\n");
-} else {
-print("Both numbers are not equal.\n");
-}
-return 0;
-}
+ #include<stdio.h>
+ int main()
+ {
+     int a,b;
+     scanf("%d%d",&a,&b);
+     if(a==b)
+     {
+         printf("X is equal to Y");
+     }
+     else
+     {
+         printf("X is NOT equal to Y");
+     }
+     return 0;
+ }
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/2ac9c9f0-d7c7-41a5-a6c6-d136c1d6f193)
-
+![image](https://github.com/user-attachments/assets/3055c3d9-95e1-4364-b316-11c543204867)
 
        
 ## RESULT
@@ -97,24 +96,26 @@ Write a C Program to convert the given string into lowercase.
 
 ## PROGRAM
 ```
-#include <stdio.h>
-#include <ctype.h>
-int main() {
-char str[100];
-int i;
-printf("Enter a string: ");
-gets(str);
-for (i = 0; str[i] != '\0'; i++) {
-str[i] = tolower(str[i]);
-}
-printf("String in lowercase: %s\n", str);
-return 0;
-}
+ #include<stdio.h>
+ #include<ctype.h>
+ int main()
+ {
+ char str[100];
+ https://github.com/Tharshini2006/M4
+ 3/7
+4/28/25, 1:37 PM
+ Tharshini2006/M4
+ scanf("%s",str);
+ for(int i=0;str[i] != '\0';i++)
+ {
+ str[i] = tolower(str[i]);
+ }
+ printf("Lower case String is:%s",str);
+ return 0;
+ }
 ```
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/86bf36cf-ed5a-4654-841c-bdf16dfdd83a)
-
-
+![image](https://github.com/user-attachments/assets/b472bd76-253b-4814-8455-c05c353c25da)
 
 
 ## RESULT
@@ -137,24 +138,22 @@ Write a C Program to count the total number of words in a given string using do 
 
 ## PROGRAM
 ```
-#include <stdio.h>
-int main() {
-char str[100];
-int i = 0, count = 1;
-printf("Enter a string: ");
-gets(str);
-do {
-if (str[i] == ' ' && str[i+1] != ' ' && str[i+1] != '\0') {
-count++;
-}
-i++;
-} while (str[i] != '\0');
-printf("Total number of words: %d\n", count);
-return 0;
-}
+ #include<stdio.h>
+ int main()
+ {
+    char a[100];
+    int l=0;
+    fgets(a,sizeof(a),stdin);
+    while(a[l]!='\0')
+    {
+       l++;
+    }
+    printf("%d",l-1);
+    return 0;
+ }
 ```
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/a59ea666-3e2c-43fc-982c-c0c1e3b50bfb)
+![image](https://github.com/user-attachments/assets/88f0384c-fc60-4287-9e0a-16dee0e1e8cc)
 
 
 
@@ -188,27 +187,31 @@ Step 8: End the program.
 
 ## PROGRAM
 ```
-#include <stdio.h>
-#include <string.h>
-int main() {
-char c1[100], c2[100];
-printf("Enter the first string: ");
-scanf(" %[^\n]", c1);
-getchar(); // consume leftover newline
-printf("Enter the second string: ");
-scanf(" %[^\n]", c2);
-if (strcmp(c1, c2) == 0) {
-printf("Strings are same.\n");
-} else {
-printf("Strings are not same.\n");
-}
-return 0;
+ #include<stdio.h>
+ #include<string.h>
+ int main()
+ {
+    char str[10];
+    char srt[10];
+    scanf("%s",str);
+    scanf("%s",srt);
+    int s = strcmp(str,srt);
+    if(s==0)
+    {
+       printf("strings are same");
+    }
+    else
+   {
+      printf("strings are not same");
+   }
+   return 0;
 }
 ```
 
 ## OUTPUT
  
-![image](https://github.com/user-attachments/assets/10b88435-b878-4b12-98d9-0fa718b7b6e6)
+![image](https://github.com/user-attachments/assets/f3fe6fd0-a295-4716-af23-128cb3c912d0)
+
 
 ## RESULT
 Thus the C Program to compare two strings without using strcmp() has been executed successfully.
